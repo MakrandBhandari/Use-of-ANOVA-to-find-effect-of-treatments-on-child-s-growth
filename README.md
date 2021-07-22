@@ -1,1 +1,11 @@
 # Use-of-ANOVA-to-find-effect-of-treatments-on-child-s-growth
+- Checking if there is any significant effect of different treatments on child's growth using One Way ANOVA test
+- I have done ANOVA test manually  from scratch without using built in Statsmodels library and just using simple pandas functions and ANOVA test steps :
+- Step 1) Find means of all 4 individual treatment groups (xi_bar)
+- Step 2) Find grand mean of all 4 treatment groups (xi_bar_bar)
+- Step 3) Sum of Squares Between the groups (SSB) = n * sum(xi_bar - xi_bar_bar)^2 , (where, n = no. of observations per treatment group, i = (1,2,3,4))
+- Step 4) Sum of Squares Within the group (SSWi) = sum(xi - xi_bar)^2 , (where, xi = individual obervations) in the group, i = (1,2,3,4)) SSW = SSW1 + SSW2 + SSW3 + SSW4
+- Step 5) Variance Between Group (VBG) = SSB / k - 1, where k = no. of groups / treatments
+- Step 6) Vraince Within Gropus (VWG) = SSW / nk - k
+- Step 7) F-stat = SSB/SSW and R2 = SSB/SST (to determine how much variation in treatment groups is explained by ANOVA test)
+- Analyzing F-stat to analyze hypothesis of ANOVA and infering the result to our problem statement
